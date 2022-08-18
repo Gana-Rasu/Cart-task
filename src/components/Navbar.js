@@ -4,7 +4,9 @@ import './Navbar.css';
 
 
 function Navbar() {
+      // Assign a contextType to read the current context. 
   const cart = useContext(Context);
+
   return (
     <>
       <div className="top">
@@ -81,6 +83,7 @@ function Navbar() {
               >
                 Cart
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+{/* react will use the context to get the required context and we can use it with the new variable */}
                 {cart.cartTotal}
                 </span>
               </button>
